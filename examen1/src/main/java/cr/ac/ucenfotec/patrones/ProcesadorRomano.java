@@ -23,6 +23,9 @@ public class ProcesadorRomano {
 			}else if(numRomanoDigit.equals("D")) {
 				equivalente = 500;
 			}
+			else if(numRomanoDigit.equals("M")) {
+				equivalente = 1000;
+			}
 		}
 		
 		return equivalente;
