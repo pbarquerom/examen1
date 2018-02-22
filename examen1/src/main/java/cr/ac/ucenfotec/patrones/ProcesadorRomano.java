@@ -6,18 +6,24 @@ public class ProcesadorRomano {
 	public int convierte(String numRomano) throws Exception {
 		int equivalente = 0;
 		
-		int ocurrenciasDeI = StringUtils.countOccurrencesOf(numRomano, "I");
-		if(ocurrenciasDeI > 3) {
-			throw new Exception();
-		}
+		ocurrenciasDeI(numRomano);
 		
 		String[] numRomanoParts = numRomano.split("");
 		for(String numRomanoDigit : numRomanoParts) {
 			if(numRomanoDigit.equals("I")) {
 				equivalente += 1;
+			}else if(numRomanoDigit.equals("V")) {
+				equivalente = 5;
 			}
 		}
 		
 		return equivalente;
+	}
+	
+	private void ocurrenciasDeI(String numRomano) throws Exception {
+		int ocurrenciasDeI = StringUtils.countOccurrencesOf(numRomano, "I");
+		if(ocurrenciasDeI > 3) {
+			throw new Exception();
+		}
 	}
 }

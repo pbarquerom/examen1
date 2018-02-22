@@ -40,4 +40,9 @@ public class ProcesadorRomanoTest {
 		procesador.convierte("IIII");
 	}
 
+	@Test
+	public void stringDeCharVTest() throws Exception {
+		ProcesadorRomano procesador = new ProcesadorRomano();
+		Assert.assertEquals(5, procesador.convierte("VV"));
+	}
 }
