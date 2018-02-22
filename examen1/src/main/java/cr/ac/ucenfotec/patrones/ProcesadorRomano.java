@@ -18,6 +18,8 @@ public class ProcesadorRomano {
 				equivalente = 10;
 			}else if(numRomanoDigit.equals("L")) {
 				equivalente = 50;
+			}else if(numRomanoDigit.equals("C")) {
+				equivalente = 100;
 			}
 		}
 		
