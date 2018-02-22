@@ -8,6 +8,8 @@ public class ProcesadorRomano {
 		
 		ocurrenciasDeI(numRomano);
 		ocurrenciasDeL(numRomano);
+		ocurrenciasDeX(numRomano);
+		
 		String[] numRomanoParts = numRomano.split("");
 		for(String numRomanoDigit : numRomanoParts) {
 			if(numRomanoDigit.equals("I")) {
@@ -22,8 +24,7 @@ public class ProcesadorRomano {
 				equivalente = 100;
 			}else if(numRomanoDigit.equals("D")) {
 				equivalente = 500;
-			}
-			else if(numRomanoDigit.equals("M")) {
+			}else if(numRomanoDigit.equals("M")) {
 				equivalente = 1000;
 			}
 		}
@@ -41,6 +42,13 @@ public class ProcesadorRomano {
 	private void ocurrenciasDeL(String numRomano) throws Exception {
 		int ocurrenciasDeI = StringUtils.countOccurrencesOf(numRomano, "L");
 		if(ocurrenciasDeI > 1) {
+			throw new Exception();
+		}
+	}
+	
+	private void ocurrenciasDeX(String numRomano) throws Exception {
+		int ocurrenciasDeI = StringUtils.countOccurrencesOf(numRomano, "X");
+		if(ocurrenciasDeI > 3) {
 			throw new Exception();
 		}
 	}
