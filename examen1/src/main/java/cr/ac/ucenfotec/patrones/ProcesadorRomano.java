@@ -20,17 +20,17 @@ public class ProcesadorRomano {
 			if(numRomanoDigit.equals("I")) {
 				equivalente += 1;
 			}else if(numRomanoDigit.equals("V")) {
-				equivalente = 5;
+				equivalente += 5;
 			}else if(numRomanoDigit.equals("X")) {
-				equivalente = 10;
+				equivalente += 10;
 			}else if(numRomanoDigit.equals("L")) {
-				equivalente = 50;
+				equivalente += 50;
 			}else if(numRomanoDigit.equals("C")) {
-				equivalente = 100;
+				equivalente += 100;
 			}else if(numRomanoDigit.equals("D")) {
-				equivalente = 500;
+				equivalente += 500;
 			}else if(numRomanoDigit.equals("M")) {
-				equivalente = 1000;
+				equivalente += 1000;
 			}
 		}
 		

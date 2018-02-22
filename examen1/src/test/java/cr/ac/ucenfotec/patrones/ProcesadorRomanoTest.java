@@ -97,6 +97,36 @@ public class ProcesadorRomanoTest {
 	@Test(expected = Exception.class)
 	public void stringOrdenadoDescendenteCharTest() throws Exception {
 		ProcesadorRomano procesador = new ProcesadorRomano();
-		procesador.convierte("LXX");
+		procesador.convierte("XXL");
+	}
+	
+	@Test
+	public void equivalenteIgual60Test() throws Exception {
+		ProcesadorRomano procesador = new ProcesadorRomano();
+		Assert.assertEquals(60, procesador.convierte("LX"));
+	}
+	
+	@Test
+	public void equivalenteIgual16Test() throws Exception {
+		ProcesadorRomano procesador = new ProcesadorRomano();
+		Assert.assertEquals(16, procesador.convierte("XVI"));
+	}
+	
+	@Test
+	public void equivalenteIgual21Test() throws Exception {
+		ProcesadorRomano procesador = new ProcesadorRomano();
+		Assert.assertEquals(21, procesador.convierte("XXI"));
+	}
+	
+	@Test
+	public void equivalenteIgual101Test() throws Exception {
+		ProcesadorRomano procesador = new ProcesadorRomano();
+		Assert.assertEquals(101, procesador.convierte("CI"));
+	}
+	
+	@Test
+	public void equivalenteIgual161Test() throws Exception {
+		ProcesadorRomano procesador = new ProcesadorRomano();
+		Assert.assertEquals(161, procesador.convierte("CLXI"));
 	}
 }
