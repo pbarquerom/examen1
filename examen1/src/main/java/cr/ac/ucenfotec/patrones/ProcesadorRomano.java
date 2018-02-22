@@ -5,13 +5,17 @@ import org.springframework.util.StringUtils;
 public class ProcesadorRomano {
 	public int convierte(String numRomano) throws Exception {
 		int equivalente = 0;
+		String[] numRomanoParts = numRomano.split("");
+		if(!isInOrder(numRomano)) {
+			throw new Exception();
+		}
 		
 		ocurrenciasDeI(numRomano);
 		ocurrenciasDeL(numRomano);
 		ocurrenciasDeX(numRomano);
 		ocurrenciasDeC(numRomano);
 		
-		String[] numRomanoParts = numRomano.split("");
+		
 		for(String numRomanoDigit : numRomanoParts) {
 			if(numRomanoDigit.equals("I")) {
 				equivalente += 1;
@@ -59,5 +63,17 @@ public class ProcesadorRomano {
 		if(ocurrencias > 3) {
 			throw new Exception();
 		}
+	}
+	
+	private boolean isInOrder(String numRomano) {
+	    char[] newStr = numRomano.toCharArray();
+		char previous = '\u0000';
+	    for (char current : newStr) {
+	        if (current < previous) {
+	        		return false;
+	        }  
+	        previous = current;
+	    }
+	    return true;
 	}
 }

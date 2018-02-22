@@ -93,4 +93,10 @@ public class ProcesadorRomanoTest {
 		ProcesadorRomano procesador = new ProcesadorRomano();
 		procesador.convierte("CCCC");
 	}
+	
+	@Test(expected = Exception.class)
+	public void stringOrdenadoDescendenteCharTest() throws Exception {
+		ProcesadorRomano procesador = new ProcesadorRomano();
+		procesador.convierte("LXX");
+	}
 }
