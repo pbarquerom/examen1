@@ -43,6 +43,12 @@ public class ProcesadorRomanoTest {
 	@Test
 	public void stringDeCharVTest() throws Exception {
 		ProcesadorRomano procesador = new ProcesadorRomano();
-		Assert.assertEquals(5, procesador.convierte("VV"));
+		Assert.assertEquals(5, procesador.convierte("V"));
+	}
+	
+	@Test
+	public void stringDeCharXTest() throws Exception {
+		ProcesadorRomano procesador = new ProcesadorRomano();
+		Assert.assertEquals(10, procesador.convierte("X"));
 	}
 }

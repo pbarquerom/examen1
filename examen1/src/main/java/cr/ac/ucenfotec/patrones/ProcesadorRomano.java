@@ -14,6 +14,8 @@ public class ProcesadorRomano {
 				equivalente += 1;
 			}else if(numRomanoDigit.equals("V")) {
 				equivalente = 5;
+			}else if(numRomanoDigit.equals("X")) {
+				equivalente = 10;
 			}
 		}
 		
