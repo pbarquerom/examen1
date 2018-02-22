@@ -21,5 +21,11 @@ public class ProcesadorRomanoTest {
 		ProcesadorRomano procesador = new ProcesadorRomano();
 		Assert.assertEquals(1, procesador.convierte("I"));
 	}
+	
+	@Test
+	public void stringDeDosCharTest() {
+		ProcesadorRomano procesador = new ProcesadorRomano();
+		Assert.assertEquals(2, procesador.convierte("II"));
+	}
 
 }
