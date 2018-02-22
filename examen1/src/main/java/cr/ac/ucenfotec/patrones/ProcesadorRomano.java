@@ -7,7 +7,7 @@ public class ProcesadorRomano {
 		int equivalente = 0;
 		
 		ocurrenciasDeI(numRomano);
-		
+		ocurrenciasDeL(numRomano);
 		String[] numRomanoParts = numRomano.split("");
 		for(String numRomanoDigit : numRomanoParts) {
 			if(numRomanoDigit.equals("I")) {
@@ -34,6 +34,13 @@ public class ProcesadorRomano {
 	private void ocurrenciasDeI(String numRomano) throws Exception {
 		int ocurrenciasDeI = StringUtils.countOccurrencesOf(numRomano, "I");
 		if(ocurrenciasDeI > 3) {
+			throw new Exception();
+		}
+	}
+	
+	private void ocurrenciasDeL(String numRomano) throws Exception {
+		int ocurrenciasDeI = StringUtils.countOccurrencesOf(numRomano, "L");
+		if(ocurrenciasDeI > 1) {
 			throw new Exception();
 		}
 	}

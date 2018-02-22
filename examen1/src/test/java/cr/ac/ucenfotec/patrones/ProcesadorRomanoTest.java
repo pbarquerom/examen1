@@ -75,4 +75,10 @@ public class ProcesadorRomanoTest {
 		ProcesadorRomano procesador = new ProcesadorRomano();
 		Assert.assertEquals(1000, procesador.convierte("M"));
 	}
+	
+	@Test(expected = Exception.class)
+	public void stringDeDosLCharTest() throws Exception {
+		ProcesadorRomano procesador = new ProcesadorRomano();
+		procesador.convierte("LL");
+	}
 }
