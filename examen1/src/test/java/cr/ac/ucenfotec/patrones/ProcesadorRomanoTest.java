@@ -87,4 +87,10 @@ public class ProcesadorRomanoTest {
 		ProcesadorRomano procesador = new ProcesadorRomano();
 		procesador.convierte("XXXX");
 	}
+	
+	@Test(expected = Exception.class)
+	public void stringDeCuatroCCharTest() throws Exception {
+		ProcesadorRomano procesador = new ProcesadorRomano();
+		procesador.convierte("CCCC");
+	}
 }
